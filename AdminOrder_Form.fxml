@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="paid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" styleClass="centGothicFont" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminOrderFormController">
+   <children>
+      <GridPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #00B6dE;">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="backButton" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label prefHeight="31.0" prefWidth="288.0" text="Create Order" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#logoutBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="logoutButtonLight" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="206.0" text="User Name |" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <SplitPane dividerPositions="0.5" layoutY="70.0" orientation="VERTICAL" prefHeight="647.0" prefWidth="900.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="898.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="214.0" text="       Client Details">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="24.0" layoutY="30.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label layoutX="10.0" layoutY="21.0" text="First Name" />
+                        <TextField fx:id="fName" GridPane.columnIndex="1" />
+                        <Label text="Last Name" GridPane.rowIndex="1" />
+                        <TextField fx:id="lName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="E-mail" GridPane.rowIndex="2" />
+                        <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="24.0" layoutY="161.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label layoutX="10.0" layoutY="65.0" text="Phone (Work)" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.6708984375" GridPane.columnIndex="1" />
+                        <TextField fx:id="ph_1" layoutX="135.0" layoutY="17.0" GridPane.columnIndex="1" />
+                        <Label text="Phone (Home)" GridPane.rowIndex="1" />
+                        <TextField fx:id="ph_2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Payment" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="payment" prefWidth="150.0" promptText="Select....." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Separator layoutX="-1.0" layoutY="24.0" prefHeight="9.0" prefWidth="856.0" />
+                  <GridPane layoutX="309.0" layoutY="29.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label layoutX="10.0" layoutY="22.0" text="Street No." />
+                        <Label layoutX="10.0" layoutY="65.0" text="Avenue" GridPane.rowIndex="1" />
+                        <TextField fx:id="St_No" GridPane.columnIndex="1" />
+                        <TextField fx:id="ave" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Postal Code" GridPane.rowIndex="2" />
+                        <TextField fx:id="P_Code" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="309.0" layoutY="160.0" prefHeight="130.0" prefWidth="250.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="22.0" text="City" />
+                        <Label layoutX="10.0" layoutY="65.0" text="Date In" GridPane.rowIndex="1" />
+                        <TextField fx:id="city" GridPane.columnIndex="1" />
+                        <DatePicker fx:id="date_in" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane layoutX="587.0" layoutY="28.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <DatePicker fx:id="date_out" GridPane.columnIndex="1" />
+                        <Label text="Date Out " />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" snapToPixel="false">
+               <children>
+                  <Separator layoutY="35.0" prefHeight="3.0" prefWidth="854.0" />
+                  <Label layoutX="32.0" layoutY="8.0" prefHeight="23.0" prefWidth="225.0" text="Equipment Details">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font></Label>
+                  <GridPane layoutX="23.0" layoutY="36.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label layoutX="10.0" layoutY="22.0" text="Serial No." />
+                        <Label text="Model" GridPane.rowIndex="1" />
+                        <TextField fx:id="serial_no" GridPane.columnIndex="1" />
+                        <TextField fx:id="model" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Company" GridPane.rowIndex="2" />
+                        <TextField fx:id="company" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="311.0" layoutY="37.0" prefHeight="130.0" prefWidth="250.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Color" />
+                        <Label text="Accessories" GridPane.rowIndex="1" />
+                        <TextField fx:id="color" GridPane.columnIndex="1" />
+                        <TextArea fx:id="accessories" prefHeight="66.0" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="19.0" layoutY="182.0" prefHeight="130.0" prefWidth="250.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="130.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="120.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Comments" />
+                        <TextArea fx:id="comments" prefHeight="130.0" prefWidth="109.0" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Button layoutX="702.0" layoutY="733.0" mnemonicParsing="false" onAction="#submitBtnClicked" prefHeight="40.0" prefWidth="165.0" styleClass="redButton" text="SUBMIT" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="518.0" layoutY="733.0" mnemonicParsing="false" onAction="#clearBtnClicked" prefHeight="40.0" prefWidth="165.0" styleClass="blueButton" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="centGothicFont" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminOrderListController">
+   <children>
+      <GridPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #56DEA7;">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="backButton" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label prefHeight="31.0" prefWidth="288.0" text="Order List" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#logoutBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="logoutButtonLight" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="206.0" text="User Name |" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="table" layoutY="120.0" prefHeight="400.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="o_orderID" prefWidth="60.0" text="Order ID" />
+          <TableColumn fx:id="o_clientID" prefWidth="60.0" text="Client ID" />
+            <TableColumn fx:id="o_firstName" prefWidth="120.0" text="Client First Name" />
+            <TableColumn fx:id="o_lastName" prefWidth="120.0" text="Client Last Name" />
+            <TableColumn fx:id="o_dateIn" prefWidth="90.0" text="Date IN" />
+            <TableColumn fx:id="o_deadline" prefWidth="78.0" text="Deadline" />
+            <TableColumn fx:id="o_email" prefWidth="150.0" text="Client email" />
+            <TableColumn fx:id="o_phone" prefWidth="120.0" text="Client Phone" />
+            <TableColumn fx:id="o_paid" prefWidth="100.0" text="Payment Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="706.0" layoutY="539.0" mnemonicParsing="false" onAction="#EditOrderTable" prefHeight="40.0" prefWidth="165.0" styleClass="orangeButton" text="EDIT" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font></Button>
+      <GridPane layoutY="70.0" prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <Label text="Search :" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBox" maxWidth="550.0" prefHeight="25.0" prefWidth="550.0" promptText="-" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="600.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="175.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

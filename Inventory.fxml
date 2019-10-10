@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="975.0" styleClass="centGothicFont" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InventoryController">
+   <children>
+      <GridPane prefHeight="70.0" prefWidth="975.0" style="-fx-background-color: #FF7659;">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="backButton" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label prefHeight="31.0" prefWidth="288.0" text="Inventory" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#logoutBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="logoutButtonLight" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="206.0" text="User Name |" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutY="70.0" prefHeight="50.0" prefWidth="975.0">
+         <children>
+            <Label text="Search :" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBox" maxWidth="550.0" prefHeight="25.0" prefWidth="550.0" promptText="-" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="617.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="inventoryTable" layoutY="120.0" prefHeight="450.0" prefWidth="975.0">
+         <columns>
+            <TableColumn fx:id="i_productID" prefWidth="65.0" text="Product ID" />
+            <TableColumn fx:id="i_type" prefWidth="105.0" text="Type" />
+            <TableColumn fx:id="i_name" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="i_company" prefWidth="95.0" text="Company" />
+            <TableColumn fx:id="i_model" prefWidth="120.0" text="Model" />
+            <TableColumn fx:id="i_serial" prefWidth="55.0" text="Serial" />
+            <TableColumn fx:id="i_qty" prefWidth="45.0" text="Qty" />
+            <TableColumn fx:id="i_comments" prefWidth="285.0" text="Comments" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

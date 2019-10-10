@@ -1,0 +1,136 @@
+.root {
+	-fx-font-family: "Century Gothic";
+}
+
+/* BUTTONS */
+.blueButton {
+	-fx-background-color: #00B6dE;
+	-fx-background-radius: 0;
+}
+.redButton {
+	-fx-background-color: #F26175;
+	-fx-background-radius: 0;
+}
+.orangeButton {
+	-fx-background-color: #FF7659;
+	-fx-background-radius: 0;
+}
+.greenButton {
+	-fx-background-color: #56DEA7;
+	-fx-background-radius: 0;
+}
+.backButton {
+	-fx-background-radius: 30;
+	-fx-background-color: null;
+	-fx-background-image: url(../Images/backButton.png);
+	-fx-background-size: cover, auto;
+		
+	-fx-border-color: #FFFFFF;
+	-fx-border-radius: 30;
+	-fx-border-width: 2.5;
+
+}
+.logoutButtonDark {
+	-fx-background-radius: 30;
+	-fx-background-color: null;
+	-fx-background-image: url(../Images/logout.png);
+	-fx-background-size: cover, auto;
+		
+	-fx-border-color: #7A8083;
+	-fx-border-radius: 30;
+	-fx-border-width: 2.5;
+}
+.logoutButtonLight {
+	-fx-background-radius: 30;
+	-fx-background-color: null;
+	-fx-background-image: url(../Images/logoutOther.png);
+	-fx-background-size: cover, auto;
+		
+	-fx-border-color: #FFFFFF;
+	-fx-border-radius: 30;
+	-fx-border-width: 2.5;
+}
+
+/* DASHBOARD BUTTONS */
+.adminCreateOrderButton{
+	-fx-background-color: #00B6dE;
+	-fx-background-image: url(../Images/AdminCreateOrderIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.createOrderButton {
+	-fx-background-color: #00B6dE;
+	-fx-background-image: url(../Images/UserCreateOrderIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.ordersButton {
+	-fx-background-color: #56DEA7;
+	-fx-background-image: url(../Images/UserOrderListIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.adminOrdersButton {
+	-fx-background-color: #56DEA7;
+	-fx-background-image: url(../Images/AdminOrderListIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.tasksButton {
+	-fx-background-color: #F8CD36;
+	-fx-background-image: url(../Images/UserTasksIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 80% 80%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.adminTasksButton {
+	-fx-background-color: #F8CD36;
+	-fx-background-image: url(../Images/AdminTasksIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 80% 80%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.inventoryButton {
+	-fx-background-color: #FF7659;
+	-fx-background-image: url(../Images/UserInventoryIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.adminInventoryButton {
+	-fx-background-color: #FF7659;
+	-fx-background-image: url(../Images/AdminInventoryIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;
+}
+.userManagementButton {
+	-fx-background-color: #F26175;
+	-fx-background-image: url(../Images/UserManagementIcon.png);
+	-fx-background-position: center center;
+	-fx-background-size: 90% 90%;
+	-fx-background-repeat: no-repeat;
+	-fx-background-radius: 0;	
+}
+
+
+/* OTHER */
+.dashBG {
+	-fx-background-image: url(../Images/CircuitBG.png);
+}
+
+.centGothicFont {
+	-fx-font-family: "Century Gothic";
+}

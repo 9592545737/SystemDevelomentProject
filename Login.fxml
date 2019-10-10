@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginPageController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="180.0">
+               <image>
+                  <Image url="@../Images/ChipLogo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="loginLabel" alignment="CENTER" prefHeight="40.0" prefWidth="248.0" text="SKYNET LOGIN" textFill="#254575">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane maxWidth="250.0" prefHeight="100.0" prefWidth="250.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="user_ID" alignment="CENTER" minHeight="40.0" promptText="Username" style="-fx-background-color: #CCCCCC; -fx-background-radius: 0;">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="pass" alignment="CENTER" minHeight="40.0" promptText="Password" style="-fx-background-color: #CCCCCC; -fx-background-radius: 0;" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <GridPane prefHeight="150.0" prefWidth="280.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#LoginButtonClicked" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #254575; -fx-background-radius: 0;" text="LOGIN" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ClearButtonClicked" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #A9D2F0; -fx-background-radius: 0;" text="CLEAR" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="50.0" layoutY="65.0" mnemonicParsing="false" onAction="#AdminLoginButtonClicked" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Red; -fx-background-radius: 0;" text="ADMIN LOGIN" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

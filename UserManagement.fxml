@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="centGothicFont" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserManagementController">
+   <children>
+      <GridPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #F26175;">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="37.5" prefWidth="37.5" styleClass="backButton" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label prefHeight="21.0" prefWidth="261.0" text="User Management" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#logoutBtnClicked" prefWidth="37.5" styleClass="logoutButtonLight" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="206.0" text="User Name |" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="75.0" minWidth="0.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="table" editable="true" layoutY="70.0" prefHeight="400.0" prefWidth="900.0" styleClass="table">
+        <columns>
+          <TableColumn fx:id="u_user_ID" prefWidth="60.0" text="User ID" />
+          <TableColumn fx:id="u_pass" prefWidth="65.0" text="Password" />
+            <TableColumn fx:id="u_firstName" prefWidth="100.0" text="First Name" />
+            <TableColumn fx:id="u_lastName" prefWidth="100.0" text="Last Name" />
+            <TableColumn fx:id="u_email" prefWidth="170.0" text="Email" />
+            <TableColumn fx:id="u_ph1" text="Phone 1" />
+            <TableColumn fx:id="u_ph2" text="Phone 2" />
+            <TableColumn fx:id="u_st_No" prefWidth="75.0" text="Street No" />
+            <TableColumn fx:id="u_ave" prefWidth="75.0" text="Avenue" />
+            <TableColumn fx:id="u_city" prefWidth="85.0" text="City" />
+        </columns>
+      </TableView>
+      <GridPane layoutY="486.0" prefHeight="100.0" prefWidth="900.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="tf_user_ID" promptText="User ID" styleClass="textField" />
+            <TextField fx:id="tf_pass" promptText="Password" styleClass="textField" GridPane.columnIndex="1" />
+            <TextField fx:id="tf_firstName" promptText="First Name" GridPane.columnIndex="2" />
+            <TextField fx:id="tf_lastName" promptText="Last Name" GridPane.columnIndex="3" />
+            <TextField fx:id="tf_email" promptText="Email" GridPane.columnIndex="4" />
+            <TextField fx:id="tf_ph1" promptText="Phone 1" GridPane.columnIndex="5" />
+            <TextField fx:id="tf_ph2" promptText="Phone 2" GridPane.columnIndex="6" />
+            <TextField fx:id="tf_st_No" promptText="Street No" GridPane.columnIndex="7" />
+            <TextField fx:id="tf_ave" promptText="Avenue" GridPane.columnIndex="8" />
+            <TextField fx:id="tf_city" promptText="City" GridPane.columnIndex="9" />
+            <Button mnemonicParsing="false" onAction="#addBtnClicked" prefHeight="40.0" prefWidth="165.0" styleClass="greenButton" text="ADD" textFill="WHITE" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="40.0" prefWidth="165.0" styleClass="redButton" text="DELETE" textFill="WHITE" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="centGothicFont" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminDashboardController">
+   <children>
+      <GridPane layoutX="1.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="400.0" minWidth="0.0" prefWidth="250.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="37.5" minWidth="37.5" mnemonicParsing="false" onAction="#logoutBtnClicked" prefWidth="37.5" styleClass="logoutButtonDark" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="285.0" text="Admin Dashboard" textFill="#7a8083">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font></Label>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="206.0" text="User Name |" textFill="#7a8083" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Pane layoutY="70.0" prefHeight="330.0" prefWidth="600.0" style="-fx-background-color: #FAFAFA;" styleClass="dashBG">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="330.0" prefWidth="600.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="166.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="166.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="166.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="165.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="165.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OrderFormBtnClicked" prefHeight="130.0" prefWidth="167.0" styleClass="adminCreateOrderButton" text="CREATE ORDER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font></Button>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#orderListBtnClicked" prefHeight="130.0" prefWidth="167.0" styleClass="adminOrdersButton" text="ORDER LIST" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font></Button>
+                  <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#TasksBtnClicked" prefHeight="130.0" prefWidth="167.0" styleClass="adminTasksButton" text="TASKS" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font></Button>
+                  <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#inventoryBtnClicked" prefHeight="130.0" prefWidth="167.0" styleClass="adminInventoryButton" text="INVENTORY" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font></Button>
+                  <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#userBtnClicked" prefHeight="130.0" prefWidth="334.0" styleClass="userManagementButton" text="USER MANAGEMENT" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets right="15.0" />
+   </padding>
+</AnchorPane>
